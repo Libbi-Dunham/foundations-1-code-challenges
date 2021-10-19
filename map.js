@@ -34,13 +34,16 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    const nameArr = arr.map(pet => {
-        console.log('before is hungry', pet);
-        pet.isHungry = true;
-        console.log('after is hungry', pet);
-        return pet;
-    });
-    return nameArr; 
+    // const nameArr = arr.map(pet => {
+    //     // console.log('before is hungry', pet);
+    //     pet.isHungry = true;
+    //     // console.log('after is hungry', pet);
+    //     return pet;
+    // });
+    // return nameArr; 
+    return arr.map(pet => ({
+        ...pet, isHungry: true
+    }));
 }
 
 /*
@@ -54,7 +57,12 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const shoutingArr = arr.map(pet => {
+        const name = pet.name;
+        pet.name = name.toUpperCase();
+        return pet;
+    });
+    return shoutingArr;
 }
 
 
