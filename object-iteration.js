@@ -24,7 +24,8 @@ etc
 */
 
 export function makeWeirdStringFromKeys(someObject) {
-    return '';
+    const keyArr = Object.keys(someObject);
+    return keyArr;
 }
 
 
