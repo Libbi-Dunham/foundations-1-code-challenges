@@ -34,8 +34,13 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    const hungryArr = arr.map(pet => pet.hungry);
-    return hungryArr; 
+    const nameArr = arr.map(pet => {
+        console.log('before is hungry', pet);
+        pet.isHungry = true;
+        console.log('after is hungry', pet);
+        return pet;
+    });
+    return nameArr; 
 }
 
 /*
